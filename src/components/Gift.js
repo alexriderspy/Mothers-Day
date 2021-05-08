@@ -7,6 +7,9 @@ const Gift = ({onClick, isVisible}) => {
         <div className='gift'>
             
             <img className='giftbox'src={ClosedGiftBox} onClick={onClick}/>
+            {!isVisible &&(
+                <h4>To discover something click on this giftbox!</h4>
+                )}
             {isVisible && (<ImageSlider slides={SliderData}/>)}
             
         </div>
